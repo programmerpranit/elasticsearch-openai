@@ -59,10 +59,7 @@ export default async function handler(req, res) {
       const negResponse =
         "I'm unable to answer the question based on the information I have from Next js Docs.";
 
-      const prompt = `Answer this question: ${query_text} Using only the information from this Next js Doc: ${body.slice(
-        0,
-        3500
-      )}\nIf the answer is not contained in the supplied doc reply '${negResponse}' and nothing else`;
+      const prompt = `Answer this question: ${query_text} Using only the information from this Next js Doc: ${body}\nIf the answer is not contained in the supplied doc reply '${negResponse}' and nothing else`;
 
       const answer = await chatGPT(prompt);
 
