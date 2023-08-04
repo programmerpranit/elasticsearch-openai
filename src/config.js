@@ -1,4 +1,4 @@
 export const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://elasticsearch-openai.vercel.app"
+    ? "https://elasticgpt.onrender.com"
     : "http://localhost:3000";
